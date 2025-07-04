@@ -9,4 +9,4 @@ The backend is going to consist of a weather API service that distributes the ne
 
 The functionality is going to consist of a display interface that shows the current weather information of where you selected, as well as a search function to allow you to enter a location you choose that you want to see the weather of. 
 
-![LWScreenShot 2025-06-07 at 22 38 22](https://github.com/user-attachments/assets/1ed0e5bc-793a-4b41-b7f2-7581c3a56ca1)
+<img width="313" alt="Screenshot 2025-07-04 at 17 13 43" src="https://github.com/user-attachments/assets/dadadba5-38ce-47f1-9b63-c3a6b466cfcc" />
