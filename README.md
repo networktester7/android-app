@@ -4,7 +4,7 @@ By 2029, an estimated 1.8 billion people worldwide will be using smartphones, wi
 
 
 ## Project Description
-This project will develop a mobile weather application that will synchronize an API with the user's device to request the latest weather forecast from one (or several) weather websites. Once the application downloads the requested data, it will display the weather forecast on the device screen. The user will be able to view a local weather forecast or to search a location from within the app. 
+This project will develop a mobile weather application that will synchronize an API with the user's device to request the latest weather forecast from one (or several) weather websites. Once the application downloads the requested data, it will display the weather forecast on the device screen. The user will be able to view a local weather forecast or search a location from within the app. 
 
 ## Problem Addressing
 As private users and organizations become increasingly dependent on smartphones for critical data, mobile applications must keep up with the rapidly advancing technological landscape. Weather data must be searchable, accessible instantaneously, and secure within the network connection. 
