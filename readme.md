@@ -22,7 +22,8 @@ The functionality is going to consist of a display interface that shows the curr
 
 ## Design (wireframes)
 
-￼
+￼<img width="980" alt="Screenshot 2025-07-06 at 15 16 06" src="https://github.com/user-attachments/assets/04bae686-e1c7-4d61-863b-c67710346b61" />
+
 ## References
 
 Global: Number of smartphone users 2014-2029. (2025). Statista. 
