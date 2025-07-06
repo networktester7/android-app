@@ -9,13 +9,13 @@ This project will develop an Android mobile inventory application that will sync
 ## Problem Addressing
 As private users and organizations become increasingly dependent on smartphones for critical data, mobile applications must keep up with the rapidly advancing technological landscape. Medical sales representatives are often called into emergency surgeries from remote locations. On the road, a rep may not have access to a computer and/or the internet. Checking hospital inventory from a computer is also laborious and time consuming. 
 
-As a sales representative, it is imperative to have hospital inventory data available at a moment’s notice. Inventory data must be searchable, accurate, accessible instantaneously, and secure within the network connection. An Android mobile inventory app will solve this common sales team problem by providing immediate access to live inventory from an Android smartphone or watch, saving time and possiby a life. 
+As a sales representative, it is imperative to have hospital inventory data available at a moment’s notice. Inventory data must be searchable, accurate, accessible instantaneously, and secure within the network connection. An Android mobile inventory app will solve this common sales team problem by providing immediate access to live inventory from an Android smartphone or watch, saving time and possibly a life. 
 
 ## Platform
 The platform is Android OS and will primarily target smartphone devices.
 
 ## Front/Back-End Support
-The backend is going to consist of an inventory database API service that distributes live hopital inventory data to sales team devices.
+The backend is going to consist of an inventory database API service that distributes live hospital inventory data to sales team devices.
 
 ## Functionality
 The functionality is going to consist of a display interface that shows the current inventory available at a hospital location, as well as a search function to allow the user to search for a specific medical device (e.g. an 18mm heart valve).
