@@ -1,5 +1,9 @@
 # Android Mobile Inventory Application
 
+
+![Screenshot_20250711-195445_Hospital Database](https://github.com/user-attachments/assets/502ecb7b-e8e8-4724-b5bd-0bcd80609591)
+
+
 ## Introduction
 By 2029, an estimated 1.8 billion people worldwide will be using smartphones, with iOS and Android as the dominant players (Global: Number of smartphone users, 2025). Mobile devices and applications are no longer for personal use only but have become a vital part of the technology ecosystem for most organizations. This project will outline the development of an Android mobile inventory application for a hypothetical medical device company and its sales force. 
 
@@ -15,14 +19,18 @@ As a sales representative, it is imperative to have hospital inventory data avai
 The platform is Android OS and will primarily target smartphone devices.
 
 ## Front/Back-End Support
-The backend is going to consist of an inventory database API service that distributes live hospital inventory data to sales team devices.
+The backend is a MySQL Server that binds to PHP through Apache to handle requests. The PHP server handles the login, add, and subtract requests. The employees can instantly see in real time how much quanities are available. 
 
 ## Functionality
-The functionality is going to consist of a display interface that shows the current inventory available at a hospital location, as well as a search function to allow the user to search for a specific medical device (e.g. an 18mm heart valve).
+The functionality is going to consist of a display interface that shows the current inventory available at a hospital location, as well as a search function to allow the user to search for a specific medical device (e.g. an IV Fluid.
+
+## Currently functioning features:
+1. Login screen that authenticates with main app
+2. Users are able to view the database and the quantities of the items
+3. Users can add quantites of items
+4. Users can subtract items from the inventory. 
 
 ## Design (wireframes)
-
-￼<img width="980" alt="Screenshot 2025-07-06 at 15 16 06" src="https://github.com/user-attachments/assets/04bae686-e1c7-4d61-863b-c67710346b61" />
 
 ## References
 
