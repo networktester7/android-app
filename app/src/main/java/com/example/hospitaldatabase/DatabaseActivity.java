@@ -33,12 +33,14 @@ public class DatabaseActivity extends AppCompatActivity {
     private Button btnAddQuantity, btnSubtractQuantity;
     private TextView tvStatus;
     private ListView lvInventoryItems;
-    private ArrayAdapter<String> inventoryAdapter;
-    private ArrayList<String> inventoryList;
+    private ArrayAdapter<InventoryItem> inventoryAdapter; // Adapter now uses InventoryItem
+    private ArrayList<InventoryItem> inventoryList; // List now holds InventoryItem objects
 
     private RequestQueue requestQueue;
 
-    // IMPORTANT: Replace with the actual URL of your PHP scripts
+    // To hold the ID of the currently selected item for updates
+    private int selectedItemId = -1; // Initialize with an invalid ID
+
     private static final String INVENTORY_UPDATE_URL = "http://172.206.33.45/update_inventory.php";
     private static final String INVENTORY_FETCH_URL = "http://172.206.33.45/get_inventory.php";
 
@@ -57,6 +59,7 @@ public class DatabaseActivity extends AppCompatActivity {
 
         // Initialize data structures for ListView
         inventoryList = new ArrayList<>();
+        // ArrayAdapter will use InventoryItem and call its toString() method
         inventoryAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,
                 inventoryList);
@@ -66,11 +69,10 @@ public class DatabaseActivity extends AppCompatActivity {
         lvInventoryItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, android.view.View view, int position, long id) {
-                String selectedItemDisplay = inventoryList.get(position);
-                // Extract only the item name (before the parenthesis for quantity)
-                String selectedItemName = selectedItemDisplay.split(" \\(")[0];
-                etItemName.setText(selectedItemName); // Populate the EditText
-                Toast.makeText(DatabaseActivity.this, "Selected: " + selectedItemName, Toast.LENGTH_SHORT).show();
+                InventoryItem selectedItem = inventoryList.get(position);
+                selectedItemId = selectedItem.getId(); // Store the selected item's ID
+                etItemName.setText(selectedItem.getName()); // Populate the EditText with the name
+                Toast.makeText(DatabaseActivity.this, "Selected: " + selectedItem.getName(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -82,17 +84,21 @@ public class DatabaseActivity extends AppCompatActivity {
 
         // Set OnClickListener for the "Add Quantity" button
         btnAddQuantity.setOnClickListener(v -> {
-            String itemName = etItemName.getText().toString().trim();
-            String quantityChangeStr = etQuantityChange.getText().toString().trim();
+            // Check if an item is selected
+            if (selectedItemId == -1) {
+                Toast.makeText(DatabaseActivity.this, "Please select an item from the list.", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-            if (itemName.isEmpty() || quantityChangeStr.isEmpty()) {
-                Toast.makeText(DatabaseActivity.this, "Please select an item and enter quantity.", Toast.LENGTH_SHORT).show();
+            String quantityChangeStr = etQuantityChange.getText().toString().trim();
+            if (quantityChangeStr.isEmpty()) {
+                Toast.makeText(DatabaseActivity.this, "Please enter quantity.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             try {
                 int quantityChange = Integer.parseInt(quantityChangeStr);
-                updateInventoryQuantity(itemName, quantityChange, "add");
+                updateInventoryQuantity(selectedItemId, quantityChange, "add"); // Pass item ID
             } catch (NumberFormatException e) {
                 Toast.makeText(DatabaseActivity.this, "Please enter a valid number for quantity.", Toast.LENGTH_SHORT).show();
             }
@@ -100,17 +106,21 @@ public class DatabaseActivity extends AppCompatActivity {
 
         // Set OnClickListener for the "Subtract Quantity" button
         btnSubtractQuantity.setOnClickListener(v -> {
-            String itemName = etItemName.getText().toString().trim();
-            String quantityChangeStr = etQuantityChange.getText().toString().trim();
+            // Check if an item is selected
+            if (selectedItemId == -1) {
+                Toast.makeText(DatabaseActivity.this, "Please select an item from the list.", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-            if (itemName.isEmpty() || quantityChangeStr.isEmpty()) {
-                Toast.makeText(DatabaseActivity.this, "Please select an item and enter quantity.", Toast.LENGTH_SHORT).show();
+            String quantityChangeStr = etQuantityChange.getText().toString().trim();
+            if (quantityChangeStr.isEmpty()) {
+                Toast.makeText(DatabaseActivity.this, "Please enter quantity.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             try {
                 int quantityChange = Integer.parseInt(quantityChangeStr);
-                updateInventoryQuantity(itemName, quantityChange, "subtract");
+                updateInventoryQuantity(selectedItemId, quantityChange, "subtract"); // Pass item ID
             } catch (NumberFormatException e) {
                 Toast.makeText(DatabaseActivity.this, "Please enter a valid number for quantity.", Toast.LENGTH_SHORT).show();
             }
@@ -120,8 +130,7 @@ public class DatabaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // It's good practice to refresh the list when returning to the activity
-        fetchInventoryList();
+        fetchInventoryList(); // Refresh the list when returning to the activity
     }
 
     /**
@@ -138,13 +147,14 @@ public class DatabaseActivity extends AppCompatActivity {
                             String status = jsonResponse.getString("status");
 
                             if (status.equals("success")) {
-                                JSONArray jsonArray = jsonResponse.getJSONArray("data"); // Get the data array
+                                JSONArray jsonArray = jsonResponse.getJSONArray("data");
                                 inventoryList.clear(); // Clear existing data
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject item = jsonArray.getJSONObject(i);
+                                    int itemId = item.getInt("item_id"); // Get item_id
                                     String itemName = item.getString("item_name");
                                     int quantity = item.getInt("quantity");
-                                    inventoryList.add(itemName + " (" + quantity + ")"); // Add formatted string
+                                    inventoryList.add(new InventoryItem(itemId, itemName, quantity)); // Add InventoryItem object
                                 }
                                 inventoryAdapter.notifyDataSetChanged(); // Update ListView
                                 tvStatus.setText("Inventory loaded.");
@@ -174,12 +184,12 @@ public class DatabaseActivity extends AppCompatActivity {
     }
 
     /**
-     * Sends a request to the server to update the quantity of an inventory item.
-     * @param itemName The name of the item to update.
+     * Sends a request to the server to update the quantity of an inventory item by ID.
+     * @param itemId The ID of the item to update.
      * @param quantityChange The amount by which to change the quantity.
      * @param operation The operation to perform: "add" or "subtract".
      */
-    private void updateInventoryQuantity(String itemName, int quantityChange, String operation) {
+    private void updateInventoryQuantity(int itemId, int quantityChange, String operation) { // Now accepts itemId
         tvStatus.setText("Updating...");
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, INVENTORY_UPDATE_URL,
@@ -190,12 +200,16 @@ public class DatabaseActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             String status = jsonResponse.getString("status");
                             String message = jsonResponse.optString("message", "No message provided.");
+                            // Optional: get updated item details from response
+                            String updatedItemName = jsonResponse.optString("item_name", "");
+                            int newQuantity = jsonResponse.optInt("new_quantity", -1);
 
                             if (status.equals("success")) {
                                 tvStatus.setText("Inventory updated successfully! " + message);
                                 Toast.makeText(DatabaseActivity.this, "Update OK: " + message, Toast.LENGTH_SHORT).show();
-                                etItemName.setText("");
+                                etItemName.setText(""); // Clear selected item name
                                 etQuantityChange.setText("");
+                                selectedItemId = -1; // Reset selected item ID
                                 fetchInventoryList(); // Refresh the list to show updated quantities
 
                             } else if (status.equals("fail")) { // For item not found or no rows affected
@@ -224,9 +238,11 @@ public class DatabaseActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-                params.put("item_name", itemName);
+                params.put("item_id", String.valueOf(itemId)); // Send item_id instead of item_name
+                // Optional: You could still send item_name for server-side logging or more descriptive responses
+                // params.put("item_name_client", etItemName.getText().toString().trim());
                 params.put("quantity_change", String.valueOf(quantityChange));
-                params.put("operation", operation); // "add" or "subtract"
+                params.put("operation", operation);
                 return params;
             }
         };
