@@ -1,7 +1,6 @@
 # Android Mobile Inventory Application
 
 
-![Screenshot_20250713-135004_Hospital Database](https://github.com/user-attachments/assets/242d309d-5737-48dc-86ef-1f2e44496ec8)
 
 
 
@@ -33,6 +32,7 @@ The functionality consists of a display interface that shows the current invento
 4. Users can subtract items from the inventory. 
 
 ## Design (wireframes)
+![Screenshot_20250713-135004_Hospital Database](https://github.com/user-attachments/assets/242d309d-5737-48dc-86ef-1f2e44496ec8)
 
 ## References
 
