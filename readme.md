@@ -19,15 +19,15 @@ As a sales representative, it is imperative to have hospital inventory data avai
 The platform is Android OS and will primarily target smartphone devices.
 
 ## Front/Back-End Support
-The backend is a MySQL Server that binds to PHP through Apache to handle requests. The PHP server handles the login, add, and subtract requests. The employees can instantly see in real time how much quanities are available. 
+Android Studio will be used to develop the app. The backend is a MySQL server that binds to PHP through Apache to handle requests. The PHP server handles the login, add, and subtract requests. Employees can instantly see in real time inventory quanities available. 
 
 ## Functionality
-The functionality is going to consist of a display interface that shows the current inventory available at a hospital location, as well as a search function to allow the user to search for a specific medical device (e.g. an IV Fluid.
+The functionality consists of a display interface that shows the current inventory available at a hospital location, as well as a search function to allow the user to search for a specific medical device (e.g. an 18 mm heart valve).
 
 ## Currently functioning features:
 1. Login screen that authenticates with main app
-2. Users are able to view the database and the quantities of the items
-3. Users can add quantites of items
+2. Users are able to view the database and inventory quantities.
+3. Users can add quantites of items.
 4. Users can subtract items from the inventory. 
 
 ## Design (wireframes)
