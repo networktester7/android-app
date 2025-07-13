@@ -1,8 +1,9 @@
 # Android Mobile Inventory Application
 
 
+![Screenshot_20250713-135004_Hospital Database](https://github.com/user-attachments/assets/242d309d-5737-48dc-86ef-1f2e44496ec8)
 
-![Screenshot_20250711-195445_Hospital Database](https://github.com/user-attachments/assets/499ab3b9-6c0f-4a1e-b857-1144bff29d48)
+
 
 
 ## Introduction
