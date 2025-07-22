@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main) // Set the layout for this activity
 
         // Find the button by its ID from the layout
-        val btnGoToLogin: Button = findViewById(R.id.button)
+        val btnGoToLogin: Button = findViewById(R.id.proceedButton)
 
         // Set an OnClickListener for the button
         btnGoToLogin.setOnClickListener {
