@@ -5,28 +5,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"   android:gravity="center"        android:background="#FFFFFF"
-    android:padding="16dp"          tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/appLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:src="@drawable/logo"
         android:contentDescription="Application Logo"
-        android:layout_marginBottom="32dp"/> <TextView
+        android:layout_marginBottom="32dp"/>
+    <TextView
     android:id="@+id/welcomeText"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Welcome to Frank Labs"
+    android:text="Inventory"
     android:textSize="24sp"
     android:textStyle="bold"
     android:textColor="#333333"
-    android:layout_marginBottom="64dp"/> <Button
+    android:layout_marginBottom="64dp"/>
+    <Button
     android:id="@+id/proceedButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Proceed To Login"
+    android:text="Login"
     android:paddingStart="24dp"
     android:paddingEnd="24dp"
     android:paddingTop="12dp"
