@@ -33,7 +33,8 @@ The functionality consists of a display interface that shows the current invento
 4. Users can subtract items from the inventory. 
 
 ## Design (wireframes)
-![Screenshot_20250713-135004_Hospital Database](https://github.com/user-attachments/assets/242d309d-5737-48dc-86ef-1f2e44496ec8)
+[469887153-010aef8b-6088-4f5f-948b-305989fe96c1](https://github.com/user-attachments/assets/6fcf9485-c37c-4dda-9cc1-6171df151bf7)
+
 
 ## References
 
