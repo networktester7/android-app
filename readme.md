@@ -33,7 +33,8 @@ The functionality consists of a display interface that shows the current invento
 4. Users can subtract items from the inventory. 
 
 ## Design (wireframes)
-[469887153-010aef8b-6088-4f5f-948b-305989fe96c1](https://github.com/user-attachments/assets/6fcf9485-c37c-4dda-9cc1-6171df151bf7)
+
+![469887153-010aef8b-6088-4f5f-948b-305989fe96c1](https://github.com/user-attachments/assets/098d1652-52f4-4435-97c7-9dc5ee234b29)
 
 
 ## References
