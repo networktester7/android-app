@@ -1,7 +1,6 @@
 # Android Mobile Inventory Application
 
 
-\
 
 
 
