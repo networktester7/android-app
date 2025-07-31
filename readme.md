@@ -35,8 +35,29 @@ The functionality consists of a display interface that shows the current invento
 
 ![469887153-010aef8b-6088-4f5f-948b-305989fe96c1](https://github.com/user-attachments/assets/098d1652-52f4-4435-97c7-9dc5ee234b29)
 
+## Homescreen and Logo
+
+![Screenshot_20250723-124116_Hospital Database](https://github.com/user-attachments/assets/bc4e8b6a-0824-4984-b009-6d33f26b53b0)
+
+## Updates
+
+Previous Updates: Interface, added search function, added the app. 
+Current Updates:
+
+The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I am currently working on developing separate inventory access pages for each hospital (Tampa General, Sarasota Memorial, and Naples Community hospitals), so the employees may access and adjust live inventory data for each destination independently. I am struggling with Android Studio frequently crashing. I am also having issues with my virtual machine and host computer (possible hardware failure). The application builds, but I still have to modify the backend for the different locations. I will then test the changes to ensure the application functions as intended. The coding and programming of my Android app continue to be challenging for me. 
+
+Future Updates: 
+
+Improve user experience and interface
+Add more features that further streamline the searching and modification functionality for the employeees
+
+## Changelog
+
+https://github.com/networktester7/android-app/commits/main/
+
 
 ## References
+
 
 Global: Number of smartphone users 2014-2029. (2025). Statista. 
 https://www.statista.com/forecasts/1143723/smartphone-users-in-the-world
