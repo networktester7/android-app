@@ -42,6 +42,7 @@ The functionality consists of a display interface that shows the current invento
 ## Updates
 
 **Previous Updates:**
+
 Designed and implemented database interface
 Added a search function
 Added the app to GitHub 
