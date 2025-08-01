@@ -26,7 +26,7 @@ Android Studio will be used to develop the app. The backend is a MySQL server th
 The functionality consists of a display interface that shows the current inventory available at a hospital location, as well as a search function to allow the user to search for a specific medical device (e.g. an 18 mm heart valve).
 
 ## Currently functioning features:
-1. Login screen that authenticates with main app
+1. Login screen authenticates with main app.
 2. Users are able to view the database and inventory quantities.
 3. Users can add quantites of items.
 4. Users can subtract items from the inventory. 
@@ -43,9 +43,9 @@ The functionality consists of a display interface that shows the current invento
 
 ## **Previous Updates:**
 
-Designed and implemented database interface
-Added a search function
-Added the app to GitHub 
+Designed and implemented database interface.
+Added a search function.
+Added the app to GitHub. 
 
 ## **Current Updates:**
 
@@ -53,9 +53,9 @@ The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I a
 
 ## **Future Updates:**
 
-Improve user experience and interface
-Add features to streamline searching 
-Streamline modification functionality
+Improve user experience and interface.
+Add features to streamline searching. 
+Streamline modification functionality.
 
 ## Changelog
 
