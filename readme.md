@@ -41,17 +41,17 @@ The functionality consists of a display interface that shows the current invento
 
 ## Updates
 
-### **Previous Updates:**
+## **Previous Updates:**
 
 Designed and implemented database interface
 Added a search function
 Added the app to GitHub 
 
-### **Current Updates:**
+## **Current Updates:**
 
 The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I am currently working on developing separate inventory access pages for each hospital (Tampa General, Sarasota Memorial, and Naples Community hospitals), so the employees may access and adjust live inventory data for each destination independently. I am struggling with Android Studio frequently crashing. I am also having issues with my virtual machine and host computer (possible hardware failure). The application builds, but I still have to modify the backend for the different locations. I will then test the changes to ensure the application functions as intended. The coding and programming of my Android app continue to be challenging for me. 
 
-### **Future Updates:**
+## **Future Updates:**
 
 Improve user experience and interface
 Add features to streamline searching 
