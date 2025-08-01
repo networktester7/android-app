@@ -43,9 +43,10 @@ The functionality consists of a display interface that shows the current invento
 
 ## **Previous Updates:**
 
-Designed and implemented database interface.
-Added a search function.
-Added the app to GitHub. 
+1. Designed and implemented database interface.
+
+2. Added a search function.
+3. Added the app to GitHub. 
 
 ## **Current Updates:**
 
@@ -53,9 +54,11 @@ The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I a
 
 ## **Future Updates:**
 
-Improve user experience and interface.
-Add features to streamline searching. 
-Streamline modification functionality.
+1. Improve user experience and interface.
+
+2. Add features to streamline searching. 
+
+3. Streamline modification functionality.
 
 ## Changelog
 
