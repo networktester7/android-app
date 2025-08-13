@@ -47,7 +47,7 @@ The functionality consists of a display interface that shows the current invento
 
 2. Added a search function.
 3. Added the app to GitHub. 
-4. Added seperate inventory pages for different hospitals
+4. Added seperate inventory pages for hospitals in the network (Tampa General, Sarasota Memorial, and Naples Community hospitals), so that employees may access and adjust live inventory data for each destination independently.
 
 ## **Current Updates:**
 
