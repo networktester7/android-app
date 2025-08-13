@@ -27,9 +27,11 @@ The functionality consists of a display interface that shows the current invento
 
 ## Currently functioning features:
 1. Login screen authenticates with main app.
-2. Users are able to view the database and inventory quantities.
-3. Users can add quantites of items.
-4. Users can subtract items from the inventory. 
+2. Search function.
+3. Users are able to view the database and inventory quantities.
+4. Users can add/subtract quantites of items from the inventory.
+5. Users can subtract items from the inventory.
+6. Separate inventory pages for each hospital in network.
 
 ## Design (wireframes)
 
@@ -44,14 +46,13 @@ The functionality consists of a display interface that shows the current invento
 ## **Previous Updates:**
 
 1. Designed and implemented database interface.
-
 2. Added a search function.
 3. Added the app to GitHub. 
 4. Added seperate inventory pages for hospitals in the network (Tampa General, Sarasota Memorial, and Naples Community hospitals), so that employees may access and adjust live inventory data for each destination independently.
 
 ## **Current Updates:**
 
-The current goal is to add multi factor authentication, and task schedulers. Multi factor authentication is especially important because the data stored within the app is highly sensitive , and unauthorized mofification would be disasterous. Additionally, HTTPS integration is curcial, as the login information must be transmitted securely, and be free of tampering. 
+Customized implementation of multi factor authentication. Multi factor authentication is especially important because the data stored within the app is highly sensitive. Unauthorized mofification would be disasterous. Additionally, HTTPS integration is curcial, as the login information must be transmitted securely, and be free of tampering. 
 
 The FrankLabs, Inc. inventory app requires automatic refreshing of the inventory database, without user initiation, to ensure heart valve availability is accurate in real-time. WorkManager, as a task scheduling API, will allow the app to prioritize the background task of database refreshing. 
 
@@ -60,13 +61,11 @@ Location-based services (LBS) will not be used in the FrankLabs, Inc inventory a
 
 ## **Future Updates:**
 
-1. Improve user experience and interface.
+1. Continue improving user experience and interface, according to FrankLabs, Inc. user feedback and market research.
 
-2. Add features to streamline searching. 
+2. Streamline functionality, as per FrankLabs, Inc. user feedback.
 
-3. Streamline modification functionality.
-
-4. Add task scheduler to refresh the inventory in the background when app is not in use.
+4. Add task scheduler (WorkManager) to refresh the inventory in the background when app is not in use.
 
 5. Add multi factor authentication.
 
