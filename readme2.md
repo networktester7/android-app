@@ -51,7 +51,10 @@ The functionality consists of a display interface that shows the current invento
 
 ## **Current Updates:**
 
-The current goal is to add multi factor authentication, and task schedulers. Multi factor authentication is especially important because the data stored within the app is highly sensitive , and unauthorized mofification would be disasterous. Additionally, HTTPS integration is curcial, as the login information must be transmitted securely, and be free of tampering.  
+The current goal is to add multi factor authentication, and task schedulers. Multi factor authentication is especially important because the data stored within the app is highly sensitive , and unauthorized mofification would be disasterous. Additionally, HTTPS integration is curcial, as the login information must be transmitted securely, and be free of tampering. 
+
+The FrankLabs, Inc. inventory app requires automatic refreshing of the inventory database, without user initiation, to ensure heart valve availability is accurate in real-time. WorkManager, as a task scheduling API, will allow the app to prioritize the background task of database refreshing. 
+ 
 
 ## **Future Updates:**
 
