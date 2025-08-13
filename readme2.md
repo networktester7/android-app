@@ -5,7 +5,7 @@
 
 
 ## Introduction
-By 2029, an estimated 1.8 billion people worldwide will be using smartphones, with iOS and Android as the dominant players (Global: Number of smartphone users, 2025). Mobile devices and applications are no longer for personal use only but have become a vital part of the technology ecosystem for most organizations. This project will outline the development of an Android mobile inventory application for a hypothetical medical device company and its sales force. 
+By 2029, an estimated 1.8 billion people worldwide will be using smartphones, with iOS and Android as the dominant players (Global: Number of smartphone users, 2025). Mobile devices and applications are no longer for personal use only but have become a vital part of the technology ecosystem for most organizations. This project will outline the development of an Android mobile inventory application for FrankLabs, Inc., a medical device company, and its sales force. 
 
 ## Project Description
 This project will develop an Android mobile inventory application that will synchronize an API with the user’s device to request inventory data from either a website or a server data base. Once the application downloads the requested data, it will display current inventory on the device screen. The user will also be able to search for a medical device from within the app.
