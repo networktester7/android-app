@@ -8,7 +8,7 @@
 By 2029, an estimated 1.8 billion people worldwide will be using smartphones, with iOS and Android as the dominant players (Global: Number of smartphone users, 2025). Mobile devices and applications are no longer for personal use only but have become a vital part of the technology ecosystem for most organizations. This project will outline the development of an Android mobile inventory application for FrankLabs, Inc., a medical device company, and its sales force. 
 
 ## Project Description
-This project will develop an Android mobile inventory application that will synchronize an API with the user’s device to request inventory data from either a website or a server data base. Once the application downloads the requested data, it will display current inventory on the device screen. The user will also be able to search for a medical device from within the app.
+This project will develop an Android mobile inventory application that will synchronize a PHP frontend to a MySQL server with the user’s device to request inventory data from either a website or a server data base. Once the application downloads the requested data, it will display current inventory on the device screen. The user will also be able to search for a medical device from within the app.
 
 ## Problem Addressing
 As private users and organizations become increasingly dependent on smartphones for critical data, mobile applications must keep up with the rapidly advancing technological landscape. Medical sales representatives are often called into emergency surgeries from remote locations. On the road, a rep may not have access to a computer and/or the internet. Checking hospital inventory from a computer is also laborious and time consuming. 
@@ -47,10 +47,11 @@ The functionality consists of a display interface that shows the current invento
 
 2. Added a search function.
 3. Added the app to GitHub. 
+4. Added seperate inventory pages for different hospitals
 
 ## **Current Updates:**
 
-The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I am currently working on developing separate inventory access pages for each hospital (Tampa General, Sarasota Memorial, and Naples Community hospitals), so the employees may access and adjust live inventory data for each destination independently. I am struggling with Android Studio frequently crashing. I am also having issues with my virtual machine and host computer (possible hardware failure). The application builds, but I still have to modify the backend for the different locations. I will then test the changes to ensure the application functions as intended. The coding and programming of my Android app continue to be challenging for me. 
+The current goal is to add multi factor authentication, and task schedulers. Multi factor authentication is especially important because the data stored within the app is highly sensitive , and unauthorized mofification would be disasterous. Additionally, HTTPS integration is curcial, as the login information must be transmitted securely, and be free of tampering.  
 
 ## **Future Updates:**
 
@@ -59,6 +60,12 @@ The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I a
 2. Add features to streamline searching. 
 
 3. Streamline modification functionality.
+
+4. Add task scheduler to refresh the inventory in the background when app is not in use
+
+5. Add multi factor authentication
+
+6. Add HTTPS Support
 
 ## Changelog
 
