@@ -66,11 +66,11 @@ Location-based services (LBS) will not be used in the FrankLabs, Inc inventory a
 
 3. Streamline modification functionality.
 
-4. Add task scheduler to refresh the inventory in the background when app is not in use
+4. Add task scheduler to refresh the inventory in the background when app is not in use.
 
-5. Add multi factor authentication
+5. Add multi factor authentication.
 
-6. Add HTTPS Support
+6. Add HTTPS Support.
 
 ## Changelog
 
