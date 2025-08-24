@@ -29,7 +29,8 @@ The functionality consists of a display interface that shows the current invento
 1. Login screen authenticates with main app.
 2. Users are able to view the database and inventory quantities.
 3. Users can add quantites of items.
-4. Users can subtract items from the inventory. 
+4. Users can subtract items from the inventory.
+5. Users may access specific hospital inventories within the region. 
 
 ## Design (wireframes)
 
@@ -47,13 +48,13 @@ The functionality consists of a display interface that shows the current invento
 
 2. Added a search function.
 3. Added the app to GitHub.
-4. Added support for viewing and modifying inventories from multiple locations
-5. Added support for removing and addimg quantities of inventory
-6. Integrated an interface that refreshes when a quantity is changed
+4. Added support for viewing and modifying inventories from multiple locations.
+5. Added support for removing and adding quantities of inventory.
+6. Integrated an interface that refreshes when a quantity is changed.
 
 ## **Current Updates:**
 
-The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I am currently working on developing separate inventory access pages for each hospital (Tampa General, Sarasota Memorial, and Naples Community hospitals), so the employees may access and adjust live inventory data for each destination independently. I am struggling with Android Studio frequently crashing. I am also having issues with my virtual machine and host computer (possible hardware failure).
+The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I recently developed separate inventory access pages for each hospital (Tampa General, Sarasota Memorial, and Naples Community hospitals), so the employees may access and adjust live inventory data for each destination independently. 
 
 ## **Future Updates:**
 
@@ -62,7 +63,7 @@ The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I a
 2. Add features to streamline searching. 
 
 3. Streamline modification functionality.
-4. Add support for TaskScheduler so that the inventory can refresh in the background when the app is not in use
+4. Add support for TaskScheduler so that the inventory can refresh in the background when the app is not in use.
 
 ## Changelog
 
