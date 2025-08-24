@@ -46,11 +46,14 @@ The functionality consists of a display interface that shows the current invento
 1. Designed and implemented database interface.
 
 2. Added a search function.
-3. Added the app to GitHub. 
+3. Added the app to GitHub.
+4. Added support for viewing and modifying inventories from multiple locations
+5. Added support for removing and addimg quantities of inventory
+6. Integrated an interface that refreshes when a quantity is changed
 
 ## **Current Updates:**
 
-The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I am currently working on developing separate inventory access pages for each hospital (Tampa General, Sarasota Memorial, and Naples Community hospitals), so the employees may access and adjust live inventory data for each destination independently. I am struggling with Android Studio frequently crashing. I am also having issues with my virtual machine and host computer (possible hardware failure). The application builds, but I still have to modify the backend for the different locations. I will then test the changes to ensure the application functions as intended. The coding and programming of my Android app continue to be challenging for me. 
+The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I am currently working on developing separate inventory access pages for each hospital (Tampa General, Sarasota Memorial, and Naples Community hospitals), so the employees may access and adjust live inventory data for each destination independently. I am struggling with Android Studio frequently crashing. I am also having issues with my virtual machine and host computer (possible hardware failure).
 
 ## **Future Updates:**
 
