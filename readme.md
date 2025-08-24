@@ -62,6 +62,7 @@ The Gulf Coast region of FrankLabs, Inc. has three hospitals in the network. I a
 2. Add features to streamline searching. 
 
 3. Streamline modification functionality.
+4. Add support for TaskScheduler so that the inventory can refresh in the background when the app is not in use
 
 ## Changelog
 
